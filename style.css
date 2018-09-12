@@ -1,0 +1,77 @@
+@keyframes hide {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: lime;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+body {
+    font: bold 100% Consolas, Monaco, monospace;
+    color: lime;
+    background: #000;
+}
+
+
+/* 
+.hello {
+    padding-left: 50px;
+    float: left;
+    border-right: .2em solid transparent;
+    margin: 2em 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 5ch;
+    -webkit-animation: typing 0.85s steps(5, end),
+        blink-caret .5s step-end 8 alternate;
+    animation: typing 0.85s steps(5, end),
+        blink-caret .5s step-end 8 alternate;
+
+} */
+
+
+/* ....other code for brevity.. */
+.hello {
+    padding-left: 50px;
+    float: left;
+    margin: 2em 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .2em solid transparent;
+    width: 5ch;
+    animation: typing 0.85s steps(5, end),
+        blink-caret .5s step-end 8 alternate;
+}
+
+
+.hello-after {
+    float: left;
+    opacity: 0;
+    border-right: .2em solid transparent;
+    width: 20ch;
+    margin: 2em 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: hide 1s step-end 3s forwards, typing 2s steps(20, end) 4s,
+        blink-caret .5s step-end infinite alternate;
+    animation: hide 1s step-end 3s forwards, typing 2s steps(20, end) 4s,
+        blink-caret .5s step-end infinite alternate
+}
